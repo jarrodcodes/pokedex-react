@@ -14,15 +14,17 @@ class PokedexViewer extends Component {
     }
 
     render() {
+
         let self = this;
-         console.log(self.props, 'app props')
-        return (
-            <div>
-<a>
-    {self.props.name}
-    </a>        
-</div>
-        )
+        console.log(self.props, 'viewer props')
+        let pokemon = self.props.Pokemon.pokemon_entries
+        console.log(pokemon, 'pokemon')
+        let pokemonList = pokemon.map(function(eachPokemon){
+                            return <li>{eachPokemon.pokemon_species.name}</li>;
+                      })
+
+        return  <ul>{ pokemonList }</ul>
+
     }
 }
 
