@@ -1,10 +1,12 @@
+import { fetchFilteredPokemon } from "./getfilteredpokemon";
+
 export const getQuery = 'getQuery';
 
 export function fetchQuery(event) {
 
     return (dispatch, getState) => {
-        console.log(event.target.value)
         dispatch(updateQuery(event.target.value));
+        dispatch(fetchFilteredPokemon(event.target.value))
     }
 }
 

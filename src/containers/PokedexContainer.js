@@ -18,7 +18,6 @@ class PokedexContainer extends Component {
         let finished = false;
         let self = this;
         if (self.state.Waiting == false) {
-            console.log(this.props, 'container props')
             return (
                 <div>
                     <PokedexChooser {...this.props} />
