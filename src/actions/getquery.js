@@ -7,7 +7,7 @@ export function fetchQuery(event, pokemon) {
     return (dispatch, getState) => {
 
         dispatch(updateQuery(event));
-        dispatch(fetchFilteredPokemon(pokemon))
+        dispatch(fetchFilteredPokemon(pokemon, event))
     }
 }
 
