@@ -8,6 +8,11 @@ class PokedexChooser extends Component {
 
     constructor(props) {
         super(props);
+        this.kickOffPokemonFilter = this.kickOffPokemonFilter.bind(this);
+    }
+
+    kickOffPokemonFilter(event) {
+        this.props.fetchQuery(event.target.value, this.props.Pokemon)
     }
 
     render() {
@@ -15,7 +20,7 @@ class PokedexChooser extends Component {
         return (
             <div>
                 <form>
-                    <input type="text" onChange={this.props.fetchQuery} />
+                    <input type="text" onChange={this.kickOffPokemonFilter} />
                 </form>
                 {/* <ul>{pokemonList}</ul> */}
             </div>

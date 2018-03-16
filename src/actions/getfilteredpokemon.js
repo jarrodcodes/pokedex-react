@@ -1,11 +1,10 @@
 export const getFilteredPokemon = 'getFilteredPokemon';
 
-export function fetchFilteredPokemon(event) {
+export function fetchFilteredPokemon(pokemon) {
     
     return (dispatch, getState) => {
 
-
-    console.log(event)
+        console.log(pokemon,'pokemon works')
     }
 }
 
